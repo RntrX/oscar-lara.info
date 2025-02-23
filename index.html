@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oscar E. Lara – Portfolio</title>
   <style>
-    /* Global Reset / Basic */
+    /* Global Reset */
     * {
       margin: 0;
       padding: 0;
@@ -15,10 +16,13 @@
       line-height: 1.6;
       background: #f3f3f3;
       color: #333;
+      text-align: center;
+      padding: 2rem 0;
     }
     a {
       color: #0077b6;
       text-decoration: none;
+      font-weight: 600;
     }
     a:hover {
       text-decoration: underline;
@@ -26,112 +30,88 @@
 
     /* Container */
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 1rem;
+    }
+
+    /* Profile Picture */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      border: 4px solid #0077b6;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     /* Header */
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header .profile-pic {
-  width: 150px;  /* Adjust the size */
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;  /* Makes it a circle */
-  display: block;
-  margin: 20px auto;  /* Centers it */
-  border: 3px solid #0077b6; /* Adds a border */
-}
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin: 1rem 0;
       font-weight: 700;
     }
     header p {
       font-size: 1.2rem;
       font-weight: 300;
+      margin-bottom: 1.5rem;
     }
 
     /* Links Row */
     .links-row {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
     .links-row a {
       font-weight: 500;
       border: 1px solid #0077b6;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
       transition: all 0.2s ease-in-out;
+      background: #0077b6;
+      color: white;
+      display: inline-block;
     }
     .links-row a:hover {
-      background: #0077b6;
+      background: #005f8d;
       color: #fff;
     }
 
-    /* Section Titles */
+    /* Sections */
+    section {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
     section h2 {
       font-size: 1.8rem;
+      color: #222;
       margin-bottom: 0.75rem;
-      color: #222;
+      text-align: center;
     }
 
-    /* Currently Building */
-    .current-building {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 5px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .current-building h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-    .current-building p {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Past Experience */
-    .experience {
-      margin-bottom: 2rem;
-    }
-    .experience-item {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 5px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .experience-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #222;
-    }
-    .experience-item p {
-      margin-bottom: 0.5rem;
-    }
-
-    /* My Views */
-    .my-views {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .my-views p {
+    /* Testimonials */
+    .testimonial {
+      font-style: italic;
+      padding: 1rem;
+      border-left: 4px solid #0077b6;
       margin-bottom: 1rem;
+      background: #f8f9fa;
+      border-radius: 5px;
     }
-    .my-views strong {
+    .testimonial strong {
       display: block;
-      margin-bottom: 0.25rem;
-      font-size: 1.1rem;
+      font-weight: 600;
       color: #222;
+      margin-top: 0.5rem;
+      text-align: right;
     }
 
     /* Footer */
@@ -142,13 +122,8 @@
       color: #555;
     }
 
+    /* Responsive Design */
     @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .container {
-        padding: 1rem;
-      }
       .links-row {
         flex-direction: column;
         gap: 0.5rem;
@@ -159,85 +134,80 @@
 <body>
 
   <div class="container">
+    <!-- Profile Image -->
+    <img src="oscar.jpg" alt="Oscar Lara" class="profile-pic">
+
     <!-- Header -->
     <header>
-      <!-- Your profile picture -->
-<img src="oscar.jpg" alt="Oscar Lara" class="profile-pic">
-
       <h1>Hi, I’m Oscar</h1>
       <p>Building unstoppable teams, exceptional customer experiences, and innovative solutions.</p>
       <div class="links-row">
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">GitHub</a>
-        <a href="mailto:youremail@example.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com/in/oscarelara/" target="_blank">LinkedIn</a>
+        <a href="https://rntrx.io" target="_blank">GitHub</a>
+        <a href="mailto:oscar.lara@outlook.com">Email</a>
       </div>
     </header>
 
     <!-- Currently Building -->
-    <section class="current-building">
+    <section>
       <h2>Currently Building</h2>
       <h3>RntrX – Co-Founder</h3>
-      <p>
-        Reimagining real estate solutions by combining technology and human insight. 
-        Focused on streamlining tenant-landlord interactions while ensuring security, 
-        compliance, and a frictionless customer journey.
-      </p>
+      <p>Reimagining real estate solutions by combining technology and human insight. 
+      Focused on streamlining tenant-landlord interactions while ensuring security, 
+      compliance, and a frictionless customer journey.</p>
     </section>
 
     <!-- Past Experience -->
-    <section class="experience">
+    <section>
       <h2>Past Experience</h2>
 
-      <div class="experience-item">
-        <h3>Microsoft – Market Manager & Program Manager</h3>
-        <p>
-          Drove strategic sales and service initiatives across multiple states, 
-          leading teams of over 400 people. Boosted market profitability and championed 
-          inclusive leadership, transforming how enterprise clients adopt cloud and 
-          productivity solutions.
-        </p>
-      </div>
+      <h3>Microsoft – Market Manager</h3>
+      <p>Led a team of **400 full-time non-exempt employees** across multiple states, driving business strategy, operational efficiency, and high-performance results.  
+      Oversaw a $90M+ annual revenue stream while managing large-scale consumer and business sales, customer support, and enterprise engagement.  
+      Recognized for fostering high team morale, implementing scalable growth strategies, and transforming underperforming teams into top-tier units.</p>
 
-      <div class="experience-item">
-        <h3>Apple – Lead Genius</h3>
-        <p>
-          Oversaw high-performing technical teams for software and hardware repairs, 
-          growing customer loyalty and leading training programs that turned 
-          underperforming locations into top-performing Genius Bars.
-        </p>
-      </div>
+      <h3>Microsoft – Program Manager</h3>
+      <p>Managed a team of **Program Managers** to drive strategic initiatives across Microsoft’s executive engagement programs.  
+      Developed streamlined processes to enhance global customer experiences for high-profile enterprise accounts, leading cross-functional collaboration across engineering, marketing, and sales teams.  
+      Delivered measurable business impact by bridging technical expertise with customer needs, improving engagement quality and operational effectiveness.</p>
 
-      <div class="experience-item">
-        <h3>Best Buy – Business Consultation Pilot</h3>
-        <p>
-          Pioneered a specialized unit serving SMB clients, focusing on network, data recovery, 
-          and security solutions—expanding revenue streams and laying the groundwork 
-          for future-scale business offerings.
-        </p>
-      </div>
+      <h3>Apple – Lead Genius</h3>
+      <p>Supervised top-performing technical support teams, ensuring service excellence in software and hardware repairs.  
+      Led training initiatives, developed efficiency-focused workflows, and piloted customer-centric support programs that scaled across multiple locations.</p>
+
+      <h3>Best Buy – Business Consultation Pilot</h3>
+      <p>Pioneered a first-of-its-kind business unit providing specialized IT and security solutions for small and mid-size businesses.  
+      Established key partnerships, expanded service offerings, and set the foundation for scalable business services.</p>
     </section>
 
-    <!-- My Views -->
-    <section class="my-views">
-      <h2>My Views</h2>
-      <p>
-        <strong>On Team Building</strong>
-        I believe a thriving team begins with trust, clear communication, and opportunities 
-        for growth. Empowering people to innovate—and championing diverse perspectives—drives 
-        better outcomes for customers, partners, and the organization.
-      </p>
-      <p>
-        <strong>On Customer Experience</strong>
-        Technology should simplify and enrich people’s lives. I’m passionate about designing 
-        solutions that solve real-world problems and deliver genuine value—balancing innovation 
-        with practicality and empathy.
-      </p>
-      <p>
-        <strong>On Growth & Future Potential</strong>
-        The future holds infinite possibilities when we blend human ingenuity with cutting-edge 
-        tech. I’m determined to explore untapped areas, break down barriers, and ensure the 
-        benefits of innovation reach people and businesses of all sizes.
-      </p>
+    <!-- Testimonials -->
+    <section>
+      <h2>What People Say</h2>
+
+      <div class="testimonial">
+        "If I had to assemble an all-star team to tackle an insurmountable challenge, 
+        Oscar would be one of the first people I'd call."
+        <strong>– Bradley Davis, Principal Group Manager at Microsoft</strong>
+      </div>
+
+      <div class="testimonial">
+        "Oscar has a unique ability to build and inspire teams, turning difficult 
+        challenges into remarkable successes."
+        <strong>– Chris Testa-O'Neill, Azure & AI Strategist</strong>
+      </div>
+
+      <div class="testimonial">
+        "Oscar doesn’t just lead—he empowers. He’s a true servant leader with a vision 
+        that drives innovation and results."
+        <strong>– Rick Green, Multi-Unit Manager at Tesla</strong>
+      </div>
+
+      <div class="testimonial">
+        "His ability to coach, mentor, and lead through change is unmatched. Oscar creates 
+        environments where both people and businesses thrive."
+        <strong>– Mary Alex, Microsoft Alum</strong>
+      </div>
+
     </section>
 
     <!-- Footer -->
@@ -245,5 +215,6 @@
       &copy; 2025 Oscar E. Lara
     </footer>
   </div>
+
 </body>
 </html>
