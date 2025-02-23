@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oscar E. Lara – Portfolio</title>
+  <style>
+    /* Global Reset / Basic */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background: #f3f3f3;
+      color: #333;
+    }
+    a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* Links Row */
+    .links-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .links-row a {
+      font-weight: 500;
+      border: 1px solid #0077b6;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+    .links-row a:hover {
+      background: #0077b6;
+      color: #fff;
+    }
+
+    /* Section Titles */
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      color: #222;
+    }
+
+    /* Currently Building */
+    .current-building {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .current-building h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .current-building p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Past Experience */
+    .experience {
+      margin-bottom: 2rem;
+    }
+    .experience-item {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .experience-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .experience-item p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* My Views */
+    .my-views {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .my-views p {
+      margin-bottom: 1rem;
+    }
+    .my-views strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #555;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .links-row {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <!-- Your profile picture -->
+      <img src="your-photo.jpg" alt="Oscar E. Lara" class="profile-pic">
+
+      <h1>Hi, I’m Oscar</h1>
+      <p>Building unstoppable teams, exceptional customer experiences, and innovative solutions.</p>
+      <div class="links-row">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="mailto:youremail@example.com" target="_blank">Email</a>
+      </div>
+    </header>
+
+    <!-- Currently Building -->
+    <section class="current-building">
+      <h2>Currently Building</h2>
+      <h3>RntrX – Co-Founder</h3>
+      <p>
+        Reimagining real estate solutions by combining technology and human insight. 
+        Focused on streamlining tenant-landlord interactions while ensuring security, 
+        compliance, and a frictionless customer journey.
+      </p>
+    </section>
+
+    <!-- Past Experience -->
+    <section class="experience">
+      <h2>Past Experience</h2>
+
+      <div class="experience-item">
+        <h3>Microsoft – Market Manager & Program Manager</h3>
+        <p>
+          Drove strategic sales and service initiatives across multiple states, 
+          leading teams of over 400 people. Boosted market profitability and championed 
+          inclusive leadership, transforming how enterprise clients adopt cloud and 
+          productivity solutions.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Apple – Lead Genius</h3>
+        <p>
+          Oversaw high-performing technical teams for software and hardware repairs, 
+          growing customer loyalty and leading training programs that turned 
+          underperforming locations into top-performing Genius Bars.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Best Buy – Business Consultation Pilot</h3>
+        <p>
+          Pioneered a specialized unit serving SMB clients, focusing on network, data recovery, 
+          and security solutions—expanding revenue streams and laying the groundwork 
+          for future-scale business offerings.
+        </p>
+      </div>
+    </section>
+
+    <!-- My Views -->
+    <section class="my-views">
+      <h2>My Views</h2>
+      <p>
+        <strong>On Team Building</strong>
+        I believe a thriving team begins with trust, clear communication, and opportunities 
+        for growth. Empowering people to innovate—and championing diverse perspectives—drives 
+        better outcomes for customers, partners, and the organization.
+      </p>
+      <p>
+        <strong>On Customer Experience</strong>
+        Technology should simplify and enrich people’s lives. I’m passionate about designing 
+        solutions that solve real-world problems and deliver genuine value—balancing innovation 
+        with practicality and empathy.
+      </p>
+      <p>
+        <strong>On Growth & Future Potential</strong>
+        The future holds infinite possibilities when we blend human ingenuity with cutting-edge 
+        tech. I’m determined to explore untapped areas, break down barriers, and ensure the 
+        benefits of innovation reach people and businesses of all sizes.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Oscar E. Lara
+    </footer>
+  </div>
+</body>
+</html>
